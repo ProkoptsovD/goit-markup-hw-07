@@ -1,44 +1,66 @@
 //=====================COLORS===========================//
+$colors: (
+  "accent": #2196f3,
+  //main and accent color in website
+  "headings": #212121,
+  //mostly used color of headlines
+  "text-main": #757575,
+  // mostly used color of text
+  "text-alt": #ffffff,
+  // alternative color of text
+  "background-body": #ffffff,
+  // body background color
+  "background-footer": #2f303a,
+  // color of background in footer
+  "background-overlay-card": rgba(33, 150, 243, 0.9),
+  //cards overlay background color
+  "logo-header": #000000,
+  //color of "Studio" part in logo in header
+  "logo-footer": #ffffff,
+  //color of "Studio" part in logo in footer
+  "links-footer": rgba(255, 255, 255, 0.6),
+  // coor of links in footer,
+);
 
-$themeColor: #2196f3; //main and accent color in website
-
-$heading-main-color: #212121; //mostly used color of headlines
-$text-main-color: #757575; // mostly used color of text
-$text-alt-color: #ffffff; // alternative color of text
-
-$bcg-color-body: #ffffff; // body background color
-$bcg-color-footer: #2f303a; // color of background in footer
-$bcg-color-overlay-card: rgba(
-  33,
-  150,
-  243,
-  0.9
-); //cards overlay background color
-
-$logo-color-header: #000000; //color of "Studio" part in logo in header
-$logo-color-footer: #ffffff; //color of "Studio" part in logo in footer
-
-$links-color-footer: rgba(255, 255, 255, 0.6); // coor of links in footer
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
 
 //=================TRANSITION AND MARGINS================//
+$transitions: (
+  "time-common": 250ms,
+  //is used for transitions while hovered and focused
+  "time-overlay-text": 500ms,
+  // aplies for scaling text in cards overlay
+  "time-func": cubic-bezier(0.4, 0, 0.2, 1),
+  //is used for  transitions while hovered and focused
+);
 
-$transition-time-common: 250ms; //is used for all transitions while hovered and focused
-$transition-time-overlay-text: 500ms; // aplies for scaling text in cards overlay
-$transition-time-function: cubic-bezier(
-  0.4,
-  0,
-  0.2,
-  1
-); //is used for all transitions while hovered and focused
+@function getTransition($key) {
+  @return map-get($transitions, $key);
+}
 
-$marginIn-flex-grids: 30px; // used in calc() for setting up margins between elements in flex grids
+$marginfGridItem: 30px; // used in calc() for setting up margins between elements in flex grids
 
 //=====================FONTS=========================//
+$fonts: (
+  "font-family-main": "Roboto",
+  "font-family-secondary": "Raleway",
+  "font-family-alt": sans-serif,
+  "font-size": 14px,
+  "font-weight": 400,
+  "line-height": 1.7,
+  "letter-spacing": 0.03em,
+);
 
-$Roboto: "Roboto";
-$Raleway: "Raleway";
-$sansSerif: sans-serif;
-$fontSize: 14px;
-$fontWeight: 400;
-$lineHeight: 1.7;
-$letterSpacing: 0.03em;
+// $Roboto: "Roboto";
+// $Raleway: "Raleway";
+// $sans-serif: sans-serif;
+// $font-size: 14px;
+// $font-weight: 400;
+// $line-height: 1.7;
+// $letter-spacing: 0.03em;
+
+@function getFonts($key) {
+  @return map-get($fonts, $key);
+}
