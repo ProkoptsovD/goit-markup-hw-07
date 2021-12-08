@@ -1,0 +1,43 @@
+//=====================COLORS===========================//
+
+$themeColor: #2196f3; //main and accent color in website
+
+$heading-main-color: #212121; //mostly used color of headlines
+$text-main-color: #757575; // mostly used color of text
+$text-alt-color: #ffffff; // alternative color of text
+
+$bcg-color-body: #ffffff; // body background color
+$bcg-color-footer: #2f303a; // color of background in footer
+$bcg-color-overlay-card: rgba(
+  33,
+  150,
+  243,
+  0.9
+); //cards overlay background color
+
+$logo-color-header: #000000; //color of "Studio" part in logo in header
+$logo-color-footer: #ffffff; //color of "Studio" part in logo in footer
+
+$links-color-footer: rgba(255, 255, 255, 0.6); // coor of links in footer
+
+//=================TRANSITION AND MARGINS================//
+
+$transition-time-common: 250ms; //is used for all transitions while hovered and focused
+$transition-time-overlay-text: 500ms; // aplies for scaling text in cards overlay
+$transition-time-function: cubic-bezier(
+  0.4,
+  0,
+  0.2,
+  1
+); //is used for all transitions while hovered and focused
+
+$margin-in-flex-cages: 30px; // used in calc() for setting up margins between elements in flex cages
+
+//=====================FONTS=========================//
+
+$Roboto: "Roboto", sans-serif;
+$Raleway: "Raleway", sans-serif;
+$font-size: 14px;
+$font-weight: 400px;
+$line-height: 1.7;
+$letter-spacing: 0.03em;
