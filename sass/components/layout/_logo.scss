@@ -1,0 +1,21 @@
+.logo,
+.header__logo,
+.footer__logo {
+  font-family: $font-second, $font-alt;
+  font-weight: fontWeight(2);
+  font-size: fontSize(4);
+  line-height: lineHeight(-5);
+  letter-spacing: letterSpacing(0);
+}
+
+.logo {
+  color: getColor(accent);
+}
+
+.header__logo {
+  color: getColor(logo-header);
+}
+
+.footer__logo {
+  color: getColor(logo-footer);
+}
