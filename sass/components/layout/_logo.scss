@@ -17,5 +17,8 @@
 }
 
 .footer__logo {
+  display: block;
+  margin-bottom: 20px;
+
   color: getColor(logo-footer);
 }

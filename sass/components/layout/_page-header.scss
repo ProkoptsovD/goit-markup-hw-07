@@ -49,8 +49,6 @@
 .navigation__link--current {
   color: getColor(accent);
 
-  background-color: yellow;
-
   &::after {
     display: block;
     margin-top: 28px;
