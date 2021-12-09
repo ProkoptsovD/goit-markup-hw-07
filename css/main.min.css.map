@@ -8,7 +8,9 @@
         "../sass/utils/base/_default-styles-reset.scss",
         "../sass/utils/_visually-hidden.scss",
         "../sass/components/layout/_body.scss",
-        "../sass/components/layout/_container-cenetered.scss"
+        "../sass/components/layout/_container-centered.scss",
+        "../sass/components/layout/_page-header.scss",
+        "../sass/components/layout/_logo.scss"
     ],
     "names": [],
     "file": "main.min.css"
