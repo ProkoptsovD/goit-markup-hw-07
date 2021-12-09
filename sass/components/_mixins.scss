@@ -1,0 +1,36 @@
+//===========BUTTONS MIXIN==================//
+@mixin button-changable(
+  $min-width,
+  $min-height,
+  $padd-y,
+  $padd-x,
+  $font-w,
+  $line-h,
+  $letter-s,
+  $bcg-color,
+  $color
+) {
+  display: inline-flex;
+  align-items: center;
+
+  width: $min-width;
+  height: $min-height;
+
+  padding: $padd-y $padd-x;
+
+  font-family: inherit;
+  font-size: fontSize(2);
+  text-align: center;
+  font-weight: $font-w;
+
+  line-height: $line-h;
+  letter-spacing: $letter-s;
+
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  background-color: $bcg-color;
+  color: $color;
+
+  cursor: pointer;
+}
