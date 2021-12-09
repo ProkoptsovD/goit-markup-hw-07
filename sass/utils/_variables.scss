@@ -20,6 +20,8 @@ $colors: (
   //color of "Studio" part in logo in footer
   "links-footer": rgba(255, 255, 255, 0.6),
   // coor of links in footer,
+  "fill-icon": #757575,
+  //color of svg icons fill
 );
 
 @function getColor($key) {
@@ -28,11 +30,11 @@ $colors: (
 
 //=================TRANSITION AND MARGINS================//
 $transitions: (
-  "time": 250ms,
+  "speed": 250ms,
   //is used for transitions while hovered and focused
-  "time-alt": 500ms,
+  "speed-alt": 500ms,
   // aplies for scaling text in cards overlay
-  "time-func": cubic-bezier(0.4, 0, 0.2, 1),
+  "speed-func": cubic-bezier(0.4, 0, 0.2, 1),
   //is used for  transitions while hovered and focused
 );
 

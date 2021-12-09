@@ -1,12 +1,12 @@
-.container {
-  display: flex;
+@mixin container($display: flex, $padd-top: 94px, $padd-btm: 94px) {
+  display: $display;
   width: 1200px;
 
   padding-right: 15px;
   padding-left: 15px;
+  padding-top: $padd-top;
+  padding-bottom: $padd-btm;
 
   margin-left: auto;
   margin-right: auto;
-
-  background-color: lightcoral;
 }
