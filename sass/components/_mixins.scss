@@ -81,7 +81,7 @@
   }
 }
 
-//this mixin is used in service section
+//this mixin is used in what we do section
 
 @mixin example(
   $grid-margin: $grid-margin-item,
@@ -101,6 +101,30 @@
     flex-basis: calc(
       #{$width} / #{$quantaty} - (#{$grid-margin} * (#{$quantaty} - 1))
     );
+    margin-left: $grid-margin;
+    margin-top: $grid-margin;
+  }
+}
+
+//this mixin is used in team section
+@mixin staff(
+  $grid-margin: $grid-margin-item,
+  $width: 100%,
+  $quantaty: 2,
+  $flex-wrap: wrap
+) {
+  display: flex;
+  flex-wrap: $flex-wrap;
+
+  margin-left: calc(-1 * #{$grid-margin});
+  margin-top: calc(-1 * #{$grid-margin});
+
+  padding: 0;
+
+  &__item {
+    // flex-basis: calc(
+    //   #{$width} / #{$quantaty} - (#{$grid-margin} * (#{$quantaty} - 1))
+    // );
     margin-left: $grid-margin;
     margin-top: $grid-margin;
   }
