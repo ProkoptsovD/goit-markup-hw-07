@@ -1,0 +1,47 @@
+.advantagies {
+  @include section;
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    @extend %visually-hidden;
+  }
+}
+
+.grid {
+  @include grid($width: 91%, $quantaty: 4);
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+}
+
+.card {
+  min-width: 270px;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 30px;
+
+  border-radius: 4px;
+
+  background-color: getColor(backround-advantagies-card);
+
+  &__label {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    line-height: lineHeight(14px, 16px);
+
+    text-transform: uppercase;
+    color: getColor(headings);
+  }
+
+  &__meta {
+    @include font-preset;
+  }
+}

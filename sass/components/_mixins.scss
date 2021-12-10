@@ -1,3 +1,23 @@
+//============CONTAINER MIXIN================//
+@mixin container($display: flex, $padd-top: 0, $padd-btm: 0) {
+  display: $display;
+  width: 1200px;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: $padd-top;
+  padding-bottom: $padd-btm;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//===========SECTION MIXIN==================//
+@mixin section($padding-top: 94px, $padding-btm: 94px) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-btm;
+}
+
 //===========BUTTONS MIXIN==================//
 @mixin button(
   $display,
@@ -38,4 +58,23 @@
   font-size: $font-size;
   line-height: lineHeight($font-size, $line-height);
   letter-spacing: $letter-spacing;
+}
+
+//==================GRID PRESET========================//
+@mixin grid($grid-margin: $grid-margin-item, $width: 100%, $quantaty: 2) {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-right: calc(-1 * #{$grid-margin});
+  margin-top: calc(-1 * #{$grid-margin});
+
+  padding: 0;
+
+  &__item {
+    flex-basis: calc(
+      #{$width} / #{$quantaty} - (#{$grid-margin} * (#{$quantaty} - 1))
+    );
+    margin-right: $grid-margin;
+    margin-top: $grid-margin;
+  }
 }

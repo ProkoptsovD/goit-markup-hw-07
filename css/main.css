@@ -286,7 +286,7 @@ img {
   max-width: 100%;
 }
 
-.visually-hidden {
+.advantagies__title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -694,5 +694,71 @@ body {
   border: none;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.advantagies {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advantagies__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: calc(-1 * 30px);
+  margin-top: calc(-1 * 30px);
+  padding: 0;
+}
+
+.grid__item {
+  -ms-flex-preferred-size: calc( 91% / 4 - (30px * (4 - 1)));
+      flex-basis: calc( 91% / 4 - (30px * (4 - 1)));
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.grid__item:last-child {
+  margin-right: 0;
+}
+
+.card {
+  min-width: 270px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+}
+
+.card__label {
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 1.14286;
+  text-transform: uppercase;
+  color: #212121;
+}
+
+.card__meta {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
 }
 /*# sourceMappingURL=main.css.map */

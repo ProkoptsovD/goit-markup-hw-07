@@ -10,6 +10,8 @@ $colors: (
   // alternative color of text
   "background-body": #ffffff,
   // body background color
+  "backround-advantagies-card": #f5f4fa,
+  //background of cards in advantagies section
   "background-footer": #2f303a,
   // color of background in footer
   "background-socials": #43444d,
@@ -37,7 +39,7 @@ $transitions: (
   //is used for  transitions while hovered and focused
 );
 
-$marginfGridItem: 30px; // used in calc() for setting up margins between elements in flex grids
+$grid-margin-item: 30px; // used in calc() for setting up margins between elements in flex grids
 
 //=====================FONTS=========================//
 
