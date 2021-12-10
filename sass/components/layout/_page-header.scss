@@ -31,11 +31,11 @@
 
 .navigation__link {
   display: block;
-
-  font-weight: fontWeight(1);
-  line-height: lineHeight(-8);
-  letter-spacing: letterSpacing(-1);
-
+  @include font-preset(
+    $font-weight: 500,
+    $line-height: 16px,
+    $letter-spacing: 0.02em
+  );
   color: getColor(headings);
 
   &:hover,
@@ -82,9 +82,11 @@
   display: flex;
   align-items: center;
 
-  font-weight: fontWeight(1);
-  line-height: lineHeight(-8);
-  letter-spacing: letterSpacing(-1);
+  @include font-preset(
+    $font-weight: 500,
+    $line-height: 16px,
+    $letter-spacing: 0.02em
+  );
 
   color: getColor(text-main);
 

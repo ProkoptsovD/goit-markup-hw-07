@@ -2,10 +2,7 @@
 .header__logo,
 .footer__logo {
   font-family: $font-second, $font-alt;
-  font-weight: fontWeight(2);
-  font-size: fontSize(4);
-  line-height: lineHeight(-5);
-  letter-spacing: letterSpacing(0);
+  @include font-preset($font-weight: 700, $font-size: 26px, $line-height: 31px);
 }
 
 .logo {

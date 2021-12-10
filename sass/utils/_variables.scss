@@ -1,4 +1,4 @@
-//=====================COLORS===========================//
+//=====================COLORS MAP===========================//
 $colors: (
   "accent": #2196f3,
   //main and accent color in website
@@ -27,10 +27,6 @@ $colors: (
   //color of svg icons fill
 );
 
-@function getColor($key) {
-  @return map-get($colors, $key);
-}
-
 //=================TRANSITION AND MARGINS================//
 $transitions: (
   "speed": 250ms,
@@ -41,10 +37,6 @@ $transitions: (
   //is used for  transitions while hovered and focused
 );
 
-@function getTransition($key) {
-  @return map-get($transitions, $key);
-}
-
 $marginfGridItem: 30px; // used in calc() for setting up margins between elements in flex grids
 
 //=====================FONTS=========================//
@@ -52,76 +44,22 @@ $marginfGridItem: 30px; // used in calc() for setting up margins between element
 $font-main: "Roboto";
 $font-second: "Raleway";
 $font-alt: sans-serif;
+$font-weight: 400;
+$font-size: 14px;
+$line-height: 26px;
+$letter-spacing: 0.03em;
 
-$font-size-base: 14px; // base font-size, is ysed in body
-$font-size: (
-  -1: $font-size-base - 2,
-  // 12px, used in forms
-  0: $font-size-base,
-  1: $font-size-base + 2,
-  // 16px, used in buttons, form placeholders,
-  2: $font-size-base + 4,
-  // 18px, used in project section headings, overlay text,
-  3: $font-size-base + 6,
-  // 20px, used in form headings
-  4: $font-size-base + 12,
-  // 26px, used in logo
-  5: $font-size-base + 22,
-  //36px, used in headings
-  6: $font-size-base + 30,
-  //44px, is used in hero heading
-);
+//=====================COLORS MAP FUNCTIONS==============//
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
 
-$font-weight: (
-  0: 400,
-  //normal
-  1: 500,
-  //semi-bold
-  2: 700,
-  //bold
-  3: 900,
-  //extra-bold
-);
-
-$line-height: (
-  -8: 1.14,
-  -7: 1.16,
-  -6: 1.17,
-  -5: 1.19,
-  -4: 1.25,
-  -3: 1.36,
-  -2: 1.56,
-  -1: 1.62,
-  0: 1.71,
-  1: 1.87,
-  2: 2
-);
-
-$letter-spacing-base: 0.03em;
-$letter-spacing: (
-  -2: $letter-spacing-base - 0.02,
-  //0.01em, used in textarea
-  -1: $letter-spacing-base - 0.01,
-  //0.02em, used in header links
-  0: $letter-spacing-base,
-  //0.03, base level, used in body
-  1: $letter-spacing-base * 2 //0.06, mostly used buttons
-);
+//=====================TRANSITION FUNCTIONS==============//
+@function getTransition($key) {
+  @return map-get($transitions, $key);
+}
 
 //=====================FONTS FUNCTIONS==================//
-
-@function fontSize($size) {
-  @return map-get($font-size, $size);
-}
-
-@function fontWeight($weight) {
-  @return map-get($font-weight, $weight);
-}
-
-@function lineHeight($height) {
-  @return map-get($line-height, $height);
-}
-
-@function letterSpacing($spacing) {
-  @return map-get($letter-spacing, $spacing);
+@function lineHeight($font-size, $line-height) {
+  @return ($line-height / $font-size);
 }
