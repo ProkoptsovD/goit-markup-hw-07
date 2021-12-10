@@ -1,0 +1,25 @@
+.service {
+  @include section(0, 94px);
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include font-preset(700, 36px, 42px);
+    text-align: center;
+  }
+}
+
+.grid {
+  @include grid();
+
+  z-index: 1;
+}
+
+.example {
+  &__meta {
+  }
+}
