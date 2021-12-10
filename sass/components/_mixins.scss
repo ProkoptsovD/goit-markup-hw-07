@@ -61,11 +61,13 @@
 }
 
 //==================GRID PRESET========================//
+
+//this mixin is used in advantagies section
 @mixin grid($grid-margin: $grid-margin-item, $width: 100%, $quantaty: 2) {
   display: flex;
   flex-wrap: wrap;
 
-  margin-right: calc(-1 * #{$grid-margin});
+  margin-left: calc(-1 * #{$grid-margin});
   margin-top: calc(-1 * #{$grid-margin});
 
   padding: 0;
@@ -74,7 +76,32 @@
     flex-basis: calc(
       #{$width} / #{$quantaty} - (#{$grid-margin} * (#{$quantaty} - 1))
     );
-    margin-right: $grid-margin;
+    margin-left: $grid-margin;
+    margin-top: $grid-margin;
+  }
+}
+
+//this mixin is used in service section
+
+@mixin example(
+  $grid-margin: $grid-margin-item,
+  $width: 100%,
+  $quantaty: 2,
+  $flex-wrap: wrap
+) {
+  display: flex;
+  flex-wrap: $flex-wrap;
+
+  margin-left: calc(-1 * #{$grid-margin});
+  margin-top: calc(-1 * #{$grid-margin});
+
+  padding: 0;
+
+  &__item {
+    flex-basis: calc(
+      #{$width} / #{$quantaty} - (#{$grid-margin} * (#{$quantaty} - 1))
+    );
+    margin-left: $grid-margin;
     margin-top: $grid-margin;
   }
 }

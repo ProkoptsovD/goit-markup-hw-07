@@ -720,7 +720,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: calc(-1 * 30px);
+  margin-left: calc(-1 * 30px);
   margin-top: calc(-1 * 30px);
   padding: 0;
 }
@@ -728,7 +728,7 @@ body {
 .grid__item {
   -ms-flex-preferred-size: calc( 91% / 4 - (30px * (4 - 1)));
       flex-basis: calc( 91% / 4 - (30px * (4 - 1)));
-  margin-right: 30px;
+  margin-left: 30px;
   margin-top: 30px;
 }
 
@@ -760,5 +760,70 @@ body {
   font-size: 14px;
   line-height: 1.71429;
   letter-spacing: 0.03em;
+}
+
+.service {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+
+.service__container {
+  display: block;
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service__title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16667;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #212121;
+}
+
+.example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-left: calc(-1 * 30px);
+  margin-top: calc(-1 * 30px);
+  padding: 0;
+  z-index: 1;
+}
+
+.example__item {
+  -ms-flex-preferred-size: calc( 100% / 2 - (30px * (2 - 1)));
+      flex-basis: calc( 100% / 2 - (30px * (2 - 1)));
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.example__wrapper {
+  position: relative;
+}
+
+.example__meta {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 0;
+  margin: auto;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.example__meta > p {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */
