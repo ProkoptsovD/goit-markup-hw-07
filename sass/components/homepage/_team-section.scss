@@ -1,6 +1,6 @@
 .team {
   @include section;
-  background-color: getColor(background-team);
+  background-color: getColor(background-alt);
 
   &__container {
     @include container($display: block);
