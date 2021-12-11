@@ -496,87 +496,101 @@
         
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <button type="button" class="close-modal-btn" data-modal-close>
-                    <svg class="close-modal-icon" width="11px" height="11px">
+                <button type="button"
+                        class="close-btn"
+                        aria-label="Закрыть окно"
+                        data-modal-close>
+
+                    <svg class="close-btn__icon" width="11px" height="11px">
                         <use href="./images/icons.svg#icon-close-modal"></use>
                     </svg>
                 </button>
 
-                <div role="group" class="modal-form">
-                    <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
+                <div role="group" class="form">
+                    <b class="form__title">
+                        Оставьте свои данные, мы вам перезвоним
+                    </b>
+
                     <form name="order-form">
-                        <div class="form-fields">
-                            <label for="user_name" class="form-label">
+                        <div class="form__field">
+                            <label for="user_name"
+                                   class="form__label">
                                 Имя
                             </label>
 
-                            <div class="form-icon">
+                            <div class="form__icon">
                                 <input
                                     type="text"
                                     name="user_name"
                                     id="user_name"
-                                    class="form-input appearence-none"
+                                    class="form__input form__input--appearance"
                                     autofocus
                                 />
-                                <svg class="icon" width="12px" height="12px">
+                                <svg width="12px" height="12px">
                                     <use href="./images/icons.svg#icon-user"></use>
                                 </svg>
                             </div>
                         </div>
 
-                        <div class="form-fields">
-                            <label for="user_tel_number" class="form-label">
+                        <div class="form__field">
+                            <label for="user_tel_number" class="form__label">
                                 Телефон
                             </label>
 
-                            <div class="form-icon">
+                            <div class="form__icon">
                                 <input
                                     type="tel"
                                     name="user_tel_number"
                                     id="user_tel_number"
-                                    class="form-input"
+                                    class="form__input"
                                     autocomplete="on"
                                 />
-                                <svg class="icon" width="13px" height="13px">
+                                <svg width="13px" height="13px">
                                     <use href="./images/icons.svg#icon-handset"></use>
                                 </svg>
                             </div>
                         </div>
 
-                        <div class="form-fields">
-                            <label for="user_email" class="form-label">
+                        <div class="form__field">
+                            <label for="user_email" class="form__label">
                                 Почта
                             </label>
 
-                            <div class="form-icon">
+                            <div class="form__icon">
                                 <input
                                     type="email"
                                     name="user_email"
                                     id="user_email"
-                                    class="form-input"
+                                    class="form__input"
                                     autocomplete="on"
                                 />
-                                <svg class="icon" width="15px" height="12px">
+                                <svg width="15px" height="12px">
                                     <use href="./images/icons.svg#icon-mail"></use>
                                 </svg>
                             </div>
                         </div>
 
-                        <div class="form-fields">
-                            <label for="comment" class="form-label">
+                        <div class="form__field">
+                            <label for="comment" class="form__label">
                                 Комментарий
                             </label>
-                            <textarea name="comment" id="comment" cols="30" rows="5" class="form-comment" placeholder="Введите текст"></textarea>
+                            <textarea name="comment"
+                                      id="comment"
+                                      cols="30"
+                                      rows="5"
+                                      class="form__comment"
+                                      placeholder="Введите текст">
+                            </textarea>
                         </div>
 
                         <div class="checkbox">
-                            <label for="agree" class="checkbox-label">
-                                <input class="checkbox-field"
+                            <label for="agree" class="checkbox__label">
+                                <input class="checkbox__field"
                                 type="checkbox"
                                 name="agree"
                                 id="agree" />
                                 
-                                <svg class="checkbox-icon" width="16" height="15px">
+                                <svg class="checkbox__icon" width="16" height="15px">
                                     <use href="./images/icons.svg#icon-check"></use>
                                 </svg>
                                 Соглашаюсь с рассылкой и принимаю 
@@ -584,7 +598,7 @@
                             </label>
                         </div>
 
-                        <button type="submit" class="form-btn">
+                        <button type="submit" class="form__btn">
                             Отправить
                         </button>
                     </form>

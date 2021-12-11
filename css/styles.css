@@ -1160,10 +1160,6 @@ img {
   cursor: pointer;
 }
 
-textarea {
-  resize: none;
-}
-
 .form-comment::placeholder {
   font-size: 12px;
   line-height: 1.16;

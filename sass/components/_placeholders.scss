@@ -1,9 +1,9 @@
-// %headings {
-//   font-weight: 700;
-//   font-size: 36px;
-//   line-height: lineHeight(36px, 42px);
+%formInput {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
-//   text-align: center;
-
-//   color: getColor(headings);
-// }
+  border: 1px solid;
+  border-color: rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}

@@ -1,0 +1,105 @@
+.form__title {
+  display: block;
+
+  margin-bottom: 12px;
+  margin-right: auto;
+  margin-left: auto;
+
+  font-size: 20px;
+  line-height: lineHeight(20px, 23px);
+
+  text-align: center;
+
+  color: getColor(headings);
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+
+  &:nth-child(4) {
+    margin-bottom: 20px;
+  }
+}
+
+// .form__input,
+// .form__comment {
+//   width: 100%;
+//   padding-top: 12px;
+//   padding-bottom: 12px;
+
+//   border: 1px solid;
+//   border-color: rgba(33, 33, 33, 0.2);
+//   border-radius: 4px;
+// }
+
+.form__input {
+  @extend %formInput;
+  height: 40px;
+  padding-left: 42px;
+
+  &--appearance {
+    appearance: none;
+  }
+
+  &:focus {
+    border-color: getColor(accent);
+    outline: 1px solid getColor(accent);
+  }
+
+  &:not(:focus) {
+    cursor: pointer;
+  }
+}
+
+.form__comment {
+  @extend %formInput;
+  padding-left: 16px;
+
+  &:focus {
+    border-color: getColor(accent);
+    outline: 1px solid getColor(accent);
+  }
+
+  &:not(:focus) {
+    cursor: pointer;
+  }
+
+  &::placeholder {
+    @include font-preset(400, 12px, 14px, 0.01em);
+    color: red;
+  }
+}
+
+.form__label {
+  margin-bottom: 4px;
+
+  @include font-preset(400, 12px, 14px, 0.01em);
+
+  color: getColor(text-main);
+
+  & > a {
+    margin-left: 5px;
+
+    color: getColor(accent);
+  }
+}
+
+.form__icon {
+  position: relative;
+
+  & > svg {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+}
+
+.form__input:focus + svg {
+  fill: getColor(accent);
+
+  @include transition(fill);
+}
