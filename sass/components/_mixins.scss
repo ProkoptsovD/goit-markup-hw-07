@@ -141,9 +141,7 @@
   padding: 0;
 
   &__card {
-    flex-basis: calc(
-      #{$width} / #{$quantaty} - (#{$grid-margin} * (#{$quantaty} - 1))
-    );
+    flex-basis: calc(#{$width} / #{$quantaty} - #{$grid-margin});
     margin-left: $grid-margin;
     margin-top: $grid-margin;
   }
