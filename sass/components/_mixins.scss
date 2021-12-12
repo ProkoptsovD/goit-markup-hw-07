@@ -150,4 +150,6 @@
 //==============TRANSITION MIXINS====================//
 @mixin transition($property, $time: 250ms) {
   transition: $property $time getTransition(speed-func);
+
+  @content;
 }

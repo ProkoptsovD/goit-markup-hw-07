@@ -15,8 +15,8 @@
   opacity: 1;
   visibility: visible;
 
-  @include transition(opacity);
-  @include transition(visibility);
+  transition: opacity getTransition(speed) getTransition(speed-func),
+    visibility getTransition(speed) getTransition(speed-func);
 }
 
 .backdrop.is-hidden {
@@ -48,7 +48,7 @@
 
   transform: translate(-50%, -50%) scale(1);
 
-  @include transition(transform getTransition(speed-alt));
+  @include transition(transform, getTransition(speed-alt));
 }
 
 .close-btn {

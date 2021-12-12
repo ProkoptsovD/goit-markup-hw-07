@@ -290,7 +290,7 @@ textarea {
   resize: none;
 }
 
-.advantagies__title, .projects-section__title {
+.advantagies__title, .projects-section__title, .checkbox__field {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1200,10 +1200,8 @@ body {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   opacity: 1;
   visibility: visible;
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -1230,10 +1228,10 @@ body {
   background-color: #ffffff;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: -webkit-transform 500ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 500ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 500ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 500ms 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn {
@@ -1324,36 +1322,36 @@ body {
   cursor: pointer;
 }
 
-.form__comment::-webkit-input-placeholder {
+.form__comment__comment::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.01em;
-  color: red;
+  color: rgba(117, 117, 117, 0.5);
 }
 
-.form__comment:-ms-input-placeholder {
+.form__comment__comment:-ms-input-placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.01em;
-  color: red;
+  color: rgba(117, 117, 117, 0.5);
 }
 
-.form__comment::-ms-input-placeholder {
+.form__comment__comment::-ms-input-placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.01em;
-  color: red;
+  color: rgba(117, 117, 117, 0.5);
 }
 
-.form__comment::placeholder {
+.form__comment__comment::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.01em;
-  color: red;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .form__label {
@@ -1386,5 +1384,85 @@ body {
   fill: #2196f3;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.checkbox__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkbox__label > a {
+  margin-left: 5px;
+  color: #2196f3;
+}
+
+.checkbox__icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  fill: #ffffff;
+}
+
+.checkbox__icon:hover {
+  cursor: pointer;
+}
+
+.checkbox__field:checked + .checkbox__icon {
+  background-color: #2196f3;
+  border: 2px solid #2196f3;
+}
+
+.form__btn {
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px 0;
+  font-family: inherit;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #2196f3;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  border: none;
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__btn:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /*# sourceMappingURL=main.css.map */
