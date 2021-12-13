@@ -95,7 +95,7 @@
     display: block;
     margin-bottom: 20px;
 
-    @include font-preset($line-height: 16px);
+    @include font-preset($font-weight: 700, $line-height: 16px);
     text-transform: uppercase;
 
     color: getColor(text-alt);
