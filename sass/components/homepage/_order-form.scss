@@ -126,6 +126,9 @@
 
   & > a {
     margin-left: 5px;
+
+    text-decoration: underline;
+
     color: getColor(accent);
   }
 }

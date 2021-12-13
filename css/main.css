@@ -1408,6 +1408,7 @@ body {
 
 .checkbox__label > a {
   margin-left: 5px;
+  text-decoration: underline;
   color: #2196f3;
 }
 
