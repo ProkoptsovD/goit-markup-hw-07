@@ -1,12 +1,7 @@
 body {
-  font-family: $font-main, $font-alt;
+  font-family: $font-main;
   font-style: normal;
   @include font-preset;
-  // font-weight: $font-weight;
-  // // font-size: $font-size;
-  // font-style: normal;
-  // // line-height: lineHeight(24px, 14px);
-  // letter-spacing: $letter-spacing;
 
   background-color: getColor(background-body);
   color: getColor(text-main);
