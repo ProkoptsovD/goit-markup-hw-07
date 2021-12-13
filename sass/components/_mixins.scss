@@ -72,6 +72,8 @@
 
   padding: 0;
 
+  @content;
+
   &__item {
     flex-basis: calc(#{$width} / #{$quantaty} - #{$grid-margin});
     margin-left: $grid-margin;

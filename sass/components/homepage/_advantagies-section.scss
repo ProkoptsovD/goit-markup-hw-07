@@ -11,8 +11,6 @@
 }
 
 .pluses {
-  flex-wrap: nowrap;
-
   @include grid(100%, 4);
 }
 
