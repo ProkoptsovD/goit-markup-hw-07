@@ -1,14 +1,14 @@
 //============GRID for project section================//
 
 .product {
-  @include product($quantaty: 3);
+  @include grid($quantaty: 3);
 
   &__description {
     padding: 20px 24px;
 
     background-color: #ffffff;
 
-    border-color: 1px solid #eeeeee;
+    border: 1px solid #eeeeee;
   }
 
   &__label {
@@ -60,8 +60,8 @@
   transform: translateY(100%);
   @include transition(transform);
 
-  .product__card:hover &,
-  .product__card:focus & {
+  .product__item:hover &,
+  .product__item:focus & {
     transform: translateY(0);
   }
 }
@@ -73,7 +73,7 @@
   transform: scale(0);
   @include transition(transform getTransition(speed-alt));
 
-  .product__card:hover & {
+  .product__item:hover & {
     transform: scale(1);
   }
 }

@@ -62,8 +62,8 @@
 
 //==================GRID PRESET========================//
 
-//this mixin is used in advantagies section
-@mixin grid($grid-margin: $grid-margin-item, $width: 100%, $quantaty: 2) {
+//this mixin is used to build grids
+@mixin grid($width: 100%, $quantaty: 2, $grid-margin: $grid-margin-item) {
   display: flex;
   flex-wrap: wrap;
 
@@ -73,74 +73,6 @@
   padding: 0;
 
   &__item {
-    flex-basis: calc(
-      #{$width} / #{$quantaty} - (#{$grid-margin} * (#{$quantaty} - 1))
-    );
-    margin-left: $grid-margin;
-    margin-top: $grid-margin;
-  }
-}
-
-//this mixin is used in what we do section
-
-@mixin example(
-  $grid-margin: $grid-margin-item,
-  $width: 100%,
-  $quantaty: 2,
-  $flex-wrap: wrap
-) {
-  display: flex;
-  flex-wrap: $flex-wrap;
-
-  margin-left: calc(-1 * #{$grid-margin});
-  margin-top: calc(-1 * #{$grid-margin});
-
-  padding: 0;
-
-  &__item {
-    flex-basis: calc(
-      #{$width} / #{$quantaty} - (#{$grid-margin} * (#{$quantaty} - 1))
-    );
-    margin-left: $grid-margin;
-    margin-top: $grid-margin;
-  }
-}
-
-//this mixin is used in team section
-@mixin staff(
-  $grid-margin: $grid-margin-item,
-  $width: 100%,
-  $quantaty: 2,
-  $flex-wrap: wrap
-) {
-  display: flex;
-  flex-wrap: $flex-wrap;
-
-  margin-left: calc(-1 * #{$grid-margin});
-  margin-top: calc(-1 * #{$grid-margin});
-
-  padding: 0;
-
-  &__item {
-    // flex-basis: calc(
-    //   #{$width} / #{$quantaty} - (#{$grid-margin} * (#{$quantaty} - 1))
-    // );
-    margin-left: $grid-margin;
-    margin-top: $grid-margin;
-  }
-}
-
-//this is mixin for projects sections
-@mixin product($grid-margin: $grid-margin-item, $width: 100%, $quantaty: 2) {
-  display: flex;
-  flex-wrap: wrap;
-
-  margin-left: calc(-1 * #{$grid-margin});
-  margin-top: calc(-1 * #{$grid-margin});
-
-  padding: 0;
-
-  &__card {
     flex-basis: calc(#{$width} / #{$quantaty} - #{$grid-margin});
     margin-left: $grid-margin;
     margin-top: $grid-margin;
@@ -150,6 +82,4 @@
 //==============TRANSITION MIXINS====================//
 @mixin transition($property, $time: 250ms) {
   transition: $property $time getTransition(speed-func);
-
-  @content;
 }

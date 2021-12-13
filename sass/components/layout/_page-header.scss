@@ -89,8 +89,8 @@
 
   color: getColor(text-main);
 
-  &:hover,
-  &:focus {
+  .contacts__item:hover &,
+  .contacts__item:focus & {
     color: getColor(accent);
 
     transition: color getTransition(speed) getTransition(speed-func);
@@ -101,7 +101,7 @@
   fill: getColor(fill-icon);
   margin-right: 10px;
 
-  .contacts__link:hover & {
+  .contacts__item:hover & {
     fill: getColor(accent);
     transition: color getTransition(speed) getTransition(speed-func);
   }

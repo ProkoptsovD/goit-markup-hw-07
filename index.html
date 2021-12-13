@@ -15,7 +15,8 @@
         <header class="page-header">
             <div class="page-header__container">
                 <!-- webstudio logo -->
-                <a class="header__logo" href="./index.html"><span class="logo">Web</span>Studio</a>
+                <a class="header__logo" href="./index.html">
+                    <span class="logo">Web</span>Studio</a>
                 <!-- website navigation -->
                 <nav>
                     <ul class="navigation">
@@ -79,8 +80,8 @@
             <section class="advantagies">
                 <div class="advantagies__container">
                     <h2 class="advantagies__title">Наши преимущества</h2>
-                    <ul class="grid">
-                    <li class="grid__item">
+                    <ul class="pluses">
+                    <li class="pluses__item">
                         <div class="card">
                             <svg width="70px" height="70px">
                                 <use href="./images/icons.svg#icon-antenna"></use>
@@ -90,7 +91,7 @@
                         <p class="card__meta">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                     </li>
 
-                    <li class="grid__item">
+                    <li class="pluses__item">
                         <div class="card">
                             <svg width="70px" height="70px">
                                 <use href="./images/icons.svg#icon-clock"></use>
@@ -99,7 +100,7 @@
                         <h3 class="card__label">Пунктуальность</h3>
                         <p class="card__meta">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                     </li>
-                    <li class="grid__item">
+                    <li class="pluses__item">
                         <div class="card">
                             <svg width="70px" height="70px">
                                 <use href="./images/icons.svg#icon-diagram"></use>
@@ -108,7 +109,7 @@
                         <h3 class="card__label">Планирование</h3>
                         <p class="card__meta">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                     </li>
-                    <li class="grid__item">
+                    <li class="pluses__item">
                         <div class="card">
                             <svg width="70px" height="70px">
                                 <use href="./images/icons.svg#icon-astronaut"></use>
@@ -482,7 +483,7 @@
                             <input type="email" name="email" class="mailing__input" placeholder="E-mail">
                         </label>
                     
-                        <button type="submit" class="mailing__btn">
+                        <button type="submit" class="mailing__btn" aria-label="Подписаться">
                             Подписаться
                             <svg class="mailing__icon" width="24px" height="24px">
                                 <use href="./images/icons.svg#icon-send"></use>
@@ -593,7 +594,7 @@
                             </label>
                         </div>
 
-                        <button type="submit" class="form__btn">
+                        <button type="submit" class="form__btn" aria-label="Отправить">
                             Отправить
                         </button>
                     </form>

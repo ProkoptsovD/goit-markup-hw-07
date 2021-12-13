@@ -12,7 +12,7 @@
   min-width: 230px;
   font-style: normal;
 
-  &__item:not(last-child) {
+  &__item:not(:last-child) {
     margin-bottom: 9px;
   }
 
@@ -22,7 +22,7 @@
 }
 
 .address__link {
-  @include font-preset($font-weight: 500, $line-height: 16px);
+  // @include font-preset($font-weight: 500, $line-height: 16px);
 
   color: getColor(links-footer);
 

@@ -10,12 +10,10 @@
   }
 }
 
-.grid {
-  @include grid($width: 91%, $quantaty: 4);
+.pluses {
+  flex-wrap: nowrap;
 
-  &__item:last-child {
-    margin-right: 0;
-  }
+  @include grid(100%, 4);
 }
 
 .card {
@@ -25,11 +23,12 @@
   padding-bottom: 25px;
   padding-left: 100px;
   padding-right: 100px;
+
   margin-bottom: 30px;
 
   border-radius: 4px;
 
-  background-color: getColor(backround-alt);
+  background-color: getColor(background-alt);
 
   &__label {
     margin-bottom: 10px;

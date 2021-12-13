@@ -17,7 +17,8 @@
 }
 
 .staff {
-  @include staff($quantaty: 4, $flex-wrap: nowrap);
+  flex-wrap: wrap;
+  @include grid($quantaty: 4);
 
   &__item {
     padding-bottom: 30px;
