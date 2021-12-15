@@ -657,7 +657,7 @@ body {
   background-image: url("../images/bg-img-hero.jpg"), -webkit-gradient(linear, left top, right top, color-stop(40%, #2f303a), color-stop(#c4c4c4), color-stop(40%, #2f303a));
   background-image: url("../images/bg-img-hero.jpg"), linear-gradient(to right, #2f303a 40%, #c4c4c4, #2f303a 40%);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 1600px, cover;
   background-position: center;
   background-color: #2f303a;
 }
@@ -701,6 +701,10 @@ body {
   background-color: #2196f3;
   color: #ffffff;
   cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
   border: none;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
