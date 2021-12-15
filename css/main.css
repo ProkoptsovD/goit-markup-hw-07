@@ -994,6 +994,11 @@ body {
   display: flex;
 }
 
+.company__link {
+  display: block;
+  width: 100%;
+}
+
 .company__element {
   width: 170px;
   padding: 16px 32px;
@@ -1005,14 +1010,21 @@ body {
   margin-right: 30px;
 }
 
+.company__element:hover, .company__element:focus {
+  border-color: #2196f3;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
 .company__icon {
   fill: #afb1b8;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.company__link:hover .company__icon,
-.company__link:focus .company__icon {
+.company__element:hover .company__icon,
+.company__element:focus .company__icon {
   fill: #2196f3;
 }
 
